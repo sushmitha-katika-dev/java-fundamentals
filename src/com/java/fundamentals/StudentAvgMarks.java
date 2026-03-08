@@ -13,10 +13,10 @@ public class StudentAvgMarks {
         int sub3 = scanner.nextInt();
         System.out.println("Enter sub4 marks");
         int sub4 = scanner.nextInt();
-        int sum = sub1+sub2+sub3+sub4;
+        int totalMarks = sub1+sub2+sub3+sub4;
         double average;
-        //average = sum /4.0;
-        average = (double) sum /4;
+        //average = totalMarks /4.0;
+        average = (double) totalMarks /4;
         System.out.println("Subject1 : "+sub1);
         System.out.println("Subject2 : "+sub2);
         System.out.println("Subject3 : "+sub3);

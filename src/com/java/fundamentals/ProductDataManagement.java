@@ -40,6 +40,7 @@ public class ProductDataManagement {
         System.out.println("Available : "+isAvailable);
         System.out.println("Rating : "+rating);
 
+
         scanner.close();
     }
 }
