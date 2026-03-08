@@ -2,7 +2,7 @@ package com.java.fundamentals;
 
 import java.util.Scanner;
 
-public class ProductPriceCalculation {
+public class ProductMembershipBilling {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter Customer Name");
