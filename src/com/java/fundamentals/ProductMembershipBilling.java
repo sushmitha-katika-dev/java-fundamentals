@@ -23,7 +23,8 @@ public class ProductMembershipBilling {
         System.out.println("Age : "+age);
         System.out.println("---*** Product Membership Billing System ***---");
         int produtPrice = 10000;
-        System.out.println("Product Price : "+produtPrice);
+        byte cgst = 5;
+        byte sgst = 5;
         double discountPercentage = 0;
         if(age > 50){
             if (membership == 'G' || membership == 'g') {
@@ -39,19 +40,24 @@ public class ProductMembershipBilling {
             discountPercentage = 10;
         }
 
-        System.out.println("Discount Percent % : "+discountPercentage);
-        double discountedAmount = (discountPercentage*produtPrice)/100;
-        System.out.println("Discounted Amount : "+discountedAmount);
-        double amount = produtPrice - (discountPercentage*produtPrice)/100;
-        System.out.println("After Discount Amount : "+amount);
-        byte cgst = 5;
-        byte sgst = 5;
-        double cgstAmount = (amount*cgst)/100;
-        System.out.println("CGST 5% : "+cgstAmount);
-        double sgstAmount = (amount*sgst)/100;
-        System.out.println("SGST 5% : "+sgstAmount);
-        double finalPrice = amount + cgst + sgst;
+        System.out.println("Product Price : "+produtPrice);
+        System.out.println("Discount % : "+discountPercentage+"%");
+
+        double discountPrice = (discountPercentage*produtPrice)/100;
+        System.out.println("Discount Price : "+discountPrice);
+
+        double discountedPrice = produtPrice - discountPrice;
+        System.out.println("Discounted Price : "+discountedPrice);
+
+        double cgstAmount = (discountedPrice * cgst) /100;
+        System.out.println("CGST 5% : "+ cgstAmount);
+
+        double sgstAmount = (discountedPrice * sgst)/100;
+        System.out.println("SGST 5% : "+ sgstAmount);
+
+        double finalPrice = discountedPrice + cgstAmount + sgstAmount;
         System.out.println("Final Bill : "+finalPrice);
+
         System.out.println("------ ******** ------");
 
     }
